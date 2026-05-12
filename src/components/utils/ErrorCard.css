@@ -1,0 +1,133 @@
+.error-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  background: var(--dark-bg-secondary);
+  border: 2px solid var(--error-600);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  margin: 1.25rem 0;
+  box-shadow: var(--shadow-md);
+}
+
+.App.light .error-card {
+  background: var(--light-bg-secondary);
+  border: 2px solid var(--error-500);
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 0.9375rem;
+  color: var(--error-600);
+}
+
+.error-card h3 {
+  color: var(--error-600);
+  margin-bottom: 0.625rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.error-card p {
+  color: var(--dark-text-secondary);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.App.light .error-card p {
+  color: var(--light-text-secondary);
+}
+
+.error-retry-btn {
+  padding: 0.625rem 1.5625rem;
+  background: linear-gradient(135deg, var(--error-600), var(--error-700));
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.error-retry-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, var(--error-700), var(--error-800));
+}
+
+.error-retry-btn:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .error-card {
+    padding: 2rem 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .error-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .error-card h3 {
+    font-size: 1.125rem;
+  }
+
+  .error-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .error-retry-btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .error-icon {
+    font-size: 2rem;
+  }
+
+  .error-card h3 {
+    font-size: 1rem;
+  }
+}
+
+.error-boundary {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+}
+
+.error-content {
+  text-align: center;
+  padding: 40px;
+}
+
+.error-content h2 {
+  color: #e50914;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.error-content p {
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}

@@ -1,67 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Flickster Movies & TV Shows</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CinePrime Movies & TV Shows</title>
 </head>
+
 <body>
-  <section class="landing">
-    <nav class="header">
-      <h1 class="logo">Flickster</h1>
-      <button id="modeToggle" class="mode-toggle">
-        <i id="modeIcon" class="fas fa-moon"></i>
-      </button>
-    </nav>
-
-    <div class="hero-content">
-      <h2 class="heading">Explore Unlimited Movies, <br> TV Shows & More</h2>
-      <input type="text" id="searchInput" placeholder="Search for Movies or TV Shows"/>
-    </div>
-  </section>
-
-  <main>
-    <div id="movie-container"></div>
-
-    <section class="movie-section">
-      <h2 class="section-title">Popular Movies</h2>
-      <div id="popular-slider" class="movie-slider"></div>
-    </section>
-
-    <section class="movie-section">
-      <h2 class="section-title">Top Rated Movies</h2>
-      <div id="top-rated-slider" class="movie-slider"></div>
-    </section>
-
-    <section class="movie-section">
-      <h2 class="section-title">Upcoming Movies</h2>
-      <div id="upcoming-slider" class="movie-slider"></div>
-    </section>
-
-    <section class="movie-section">
-      <h2 class="section-title">Now Playing Movies</h2>
-      <div id="now-playing-slider" class="movie-slider"></div>
-    </section>
-  </main>
-
-
-  <footer class="footer">
-  <div class="footer-content">
-    <h2>Flickster</h2>
-    <p>Powered by TMDB API</p>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-github"></i></a>
-    </div>
-    <p>&copy; 2025 Flickster. All rights reserved.</p>
-  </div>
-</footer>
-
-
-  <script type="module" src="./script.js"></script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
+
 </html>

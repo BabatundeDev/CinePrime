@@ -1,0 +1,122 @@
+.skeleton-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.skeleton-card {
+  background: var(--dark-bg-tertiary);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  animation: pulse 2s infinite;
+  border: 1px solid var(--dark-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.App.light .skeleton-card {
+  background: var(--light-bg-tertiary);
+  border: 1px solid var(--light-border);
+}
+
+.skeleton-image {
+  width: 100%;
+  aspect-ratio: 2/3;
+  background: linear-gradient(90deg, var(--dark-border) 25%, var(--dark-border-light) 50%, var(--dark-border) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.App.light .skeleton-image {
+  background: linear-gradient(90deg, var(--light-border) 25%, var(--light-border-light) 50%, var(--light-border) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.skeleton-title {
+  width: 80%;
+  height: 1.125rem;
+  background: linear-gradient(90deg, var(--dark-border) 25%, var(--dark-border-light) 50%, var(--dark-border) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  margin: 1rem 1rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.App.light .skeleton-title {
+  background: linear-gradient(90deg, var(--light-border) 25%, var(--light-border-light) 50%, var(--light-border) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.skeleton-text {
+  width: 60%;
+  height: 0.875rem;
+  background: linear-gradient(90deg, var(--dark-border) 25%, var(--dark-border-light) 50%, var(--dark-border) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  margin: 0 1rem 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.App.light .skeleton-text {
+  background: linear-gradient(90deg, var(--light-border) 25%, var(--light-border-light) 50%, var(--light-border) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skeleton-container {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.875rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skeleton-container {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .skeleton-title {
+    height: 1rem;
+    margin: 0.875rem 0.875rem 0.375rem;
+  }
+
+  .skeleton-text {
+    height: 0.75rem;
+    margin: 0 0.875rem 0.875rem;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}

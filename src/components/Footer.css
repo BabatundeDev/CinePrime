@@ -1,0 +1,241 @@
+.footer {
+  background: var(--dark-bg-primary);
+  border-top: 1px solid var(--dark-border);
+  padding: 4rem 2rem 2rem;
+  margin-top: 5rem;
+  color: var(--dark-text-secondary);
+  position: relative;
+}
+
+.App.light .footer {
+  background: var(--light-bg-primary);
+  border-top: 1px solid var(--light-border);
+  color: var(--light-text-secondary);
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-600), transparent);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: var(--primary-600);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after,
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-600), transparent);
+  border-radius: var(--radius-sm);
+}
+
+.footer-section p {
+  line-height: 1.7;
+  color: var(--dark-text-secondary);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.App.light .footer-section p {
+  color: var(--light-text-secondary);
+}
+
+.footer-section a {
+  color: var(--primary-600);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-section a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--primary-600);
+  transition: width var(--transition-fast);
+}
+
+.footer-section a:hover {
+  color: var(--primary-700);
+  transform: translateX(2px);
+}
+
+.footer-section a:hover::after {
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: var(--dark-bg-secondary);
+  border: 2px solid var(--dark-border);
+  border-radius: var(--radius-full);
+  color: var(--dark-text-primary);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+}
+
+.App.light .social-links a {
+  background: var(--light-bg-secondary);
+  border: 2px solid var(--light-border);
+  color: var(--light-text-primary);
+}
+
+.social-links a:hover {
+  background: var(--primary-600);
+  border-color: var(--primary-600);
+  color: white;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--dark-border);
+  color: var(--dark-text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.App.light .footer-bottom {
+  border-top: 1px solid var(--light-border);
+  color: var(--light-text-muted);
+}
+
+.footer-bottom p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.footer-bottom span {
+  color: var(--primary-600);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.5rem 1.5rem;
+    margin-top: 4rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-section h3,
+  .footer-section h4 {
+    font-size: 1.125rem;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .social-link {
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2.5rem 1rem 1rem;
+    margin-top: 3rem;
+  }
+
+  .footer-content {
+    gap: 2rem;
+  }
+
+  .footer-section h3,
+  .footer-section h4 {
+    font-size: 1rem;
+  }
+
+  .footer-section p {
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  .social-link {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  .social-links a {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.85rem;
+  }
+}
